@@ -1,0 +1,4 @@
+
+python edmPickEvents.py "HIMinimumBias15/HIRun2018A-04Apr2019-v1/AOD" events.txt 
+
+
