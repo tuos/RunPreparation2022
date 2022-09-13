@@ -5,14 +5,17 @@ process = cms.Process("Demo")
 
 process.load("FWCore.MessageService.MessageLogger_cfi")
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
-process.MessageLogger.cerr.FwkReport.reportEvery = 100000
+process.MessageLogger.cerr.FwkReport.reportEvery = 500000
 
 process.source = cms.Source("PoolSource",
                             duplicateCheckMode = cms.untracked.string("noDuplicateCheck"),
                 fileNames = cms.untracked.vstring(
-'/store/hidata/HIRun2018A/HIMinimumBias9/AOD/04Apr2019-v1/60000/6E57258E-521F-A045-93D9-6F3AF3D13BEE.root',
-'/store/hidata/HIRun2018A/HIMinimumBias12/AOD/04Apr2019-v1/30009/311A32E0-6F20-4148-9481-938F56BBFE60.root',
-'/store/hidata/HIRun2018A/HIMinimumBias15/AOD/04Apr2019-v1/20003/9886637D-A2A8-344C-A521-6053B775F419.root'
+'/store/hidata/HIRun2018A/HIMinimumBias9/AOD/04Apr2019-v1/60000/FE030522-2862-6D45-AAFC-EAA308642521.root',
+'/store/hidata/HIRun2018A/HIMinimumBias9/AOD/04Apr2019-v1/60000/FE6CAD40-3665-C046-87E3-ADADF26FCFF0.root',
+'/store/hidata/HIRun2018A/HIMinimumBias9/AOD/04Apr2019-v1/60000/FE78D88F-FAD8-EF45-AF6E-4FAF4411A25C.root',
+'/store/hidata/HIRun2018A/HIMinimumBias9/AOD/04Apr2019-v1/60000/FEA34B41-BD94-CE4F-A98E-1A6D59B06E8D.root',
+'/store/hidata/HIRun2018A/HIMinimumBias9/AOD/04Apr2019-v1/60000/FEB09402-0F2A-E645-A313-F904B9A3AD09.root',
+'/store/hidata/HIRun2018A/HIMinimumBias9/AOD/04Apr2019-v1/60000/FF066378-4E01-1F45-96A1-4CE7684FD0EA.root'
 ),
 )
 
@@ -70,7 +73,9 @@ process.eventSelection = cms.Sequence(process.hltHIMinimumBias_SinglePixelTrack_
 #process.p = cms.Path(process.demo)
 #process.p = cms.Path(process.NoScraping * process.demo)
 #process.p = cms.Path(process.NoScraping * process.centralityBin * process.demo)
+
 process.p = cms.Path(process.eventSelection * process.centralityBin * process.demo)
+#process.p = cms.Path(process.hltHIMinimumBias_SinglePixelTrack_Npix * process.MBAODprimaryVertexFilter * process.NoScraping * process.centralityBin * process.demo)
 
 #process.p = cms.Path(process.hltHIMinimumBias_SinglePixelTrack_Npix * process.demo)
 #process.p = cms.Path(process.eventSelection * process.demo)
