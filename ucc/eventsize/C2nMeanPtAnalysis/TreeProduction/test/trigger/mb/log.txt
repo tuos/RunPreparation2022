@@ -1,0 +1,8 @@
+Begin processing the 3564th record. Run 327462, Event 118600408, LumiSection 273 on stream 0 at 13-Sep-2022 12:15:00.539 CDT
+/cvmfs/cms.cern.ch/slc7_amd64_gcc700/cms/cmssw/CMSSW_10_3_3/bin/slc7_amd64_gcc700/edmCopyPickMerge: line 13: 35356 Killed                  cmsRun $CPMConfig $@
+[tuos@gw342 mb]$ 
+
+-rw-r--r-- 1 tuos cms 2.4G Sep 13 12:15 pickevents_centAll.root
+-rw-r--r-- 1 tuos cms 2478362929 Sep 13 12:15 pickevents_centAll.root
+
+

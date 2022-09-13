@@ -46,7 +46,7 @@ process.load("HeavyIonsAnalysis.Configuration.hfCoincFilter_cff")
 #process.load("HeavyIonsAnalysis.VertexAnalysis.pileUpFilter_cff")
 
 process.TFileService = cms.Service("TFileService",
-                                  fileName=cms.string("flow_data_PbPbMBAOD_tree.root"))
+                                  fileName=cms.string("flow_data_PbPbMBAOD_tree_withntrack.root"))
 
 process.load("RecoHI.HiCentralityAlgos.CentralityBin_cfi")
 process.centralityBin.Centrality = cms.InputTag("hiCentrality")
@@ -74,8 +74,8 @@ process.eventSelection = cms.Sequence(process.hltHIMinimumBias_SinglePixelTrack_
 #process.p = cms.Path(process.NoScraping * process.demo)
 #process.p = cms.Path(process.NoScraping * process.centralityBin * process.demo)
 
-process.p = cms.Path(process.eventSelection * process.centralityBin * process.demo)
-#process.p = cms.Path(process.hltHIMinimumBias_SinglePixelTrack_Npix * process.MBAODprimaryVertexFilter * process.NoScraping * process.centralityBin * process.demo)
+#process.p = cms.Path(process.eventSelection * process.centralityBin * process.demo)
+process.p = cms.Path(process.hltHIMinimumBias_SinglePixelTrack_Npix * process.MBAODprimaryVertexFilter * process.NoScraping * process.centralityBin * process.demo)
 
 #process.p = cms.Path(process.hltHIMinimumBias_SinglePixelTrack_Npix * process.demo)
 #process.p = cms.Path(process.eventSelection * process.demo)

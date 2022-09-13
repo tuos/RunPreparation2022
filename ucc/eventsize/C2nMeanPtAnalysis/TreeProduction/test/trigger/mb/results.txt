@@ -1,11 +1,24 @@
 Cent  nEvents totalSize sizePerEvent
 0     24      99MB      4.1MB/event
 1     75      284MB     3.8MB/event
-MB    5000              0.XMB/event
-MB    1500    1000MB    0.66MB/event
+MB    3000    2000MB    0.66MB/event
 
 event size ratio compared to MB
 top 0.5%:  6.2
 top 1.0%:  5.7
+
+
+Cross check with nTracks in each centrality class
+Cent   <nTrack>
+0      12990
+1      12230
+MB     1952
+event size ratio compared to MB
+top 0.5%:  6.65
+top 1.0%:  6.26
+
+Conclusion:
+The size of UCC events is about 6 times the size of MB events. 
+The uncertainty for the number 6 is less than 10%.
 
 
