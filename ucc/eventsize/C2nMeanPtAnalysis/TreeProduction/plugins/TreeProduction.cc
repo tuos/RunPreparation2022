@@ -217,7 +217,7 @@ TreeProduction::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 
 //    cout<<"cent = "<<cent<<endl;
     if(cent==0 || cent==1){
-      cout<<cent<<"     "<<iEvent.id().run()<<"  "<<iEvent.id().luminosityBlock() <<"  "<<iEvent.id().event()<<endl;
+      cout<<cent<<"  "<<iEvent.id().run()<<":"<<iEvent.id().luminosityBlock() <<":"<<iEvent.id().event()<<endl;
     }
     _cent = cent;
     _run = iEvent.id().run();
