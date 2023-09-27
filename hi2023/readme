@@ -1,0 +1,14 @@
+
+need to ssh to the special cron serve:
+vm-cronibus
+
+need: 
+voms-proxy-init -voms cms -rfc
+
+better to do this one:
+voms-proxy-init -rfc -voms cms -valid 192:00
+
+with this setup, the proxy will be valid for 8 days.
+each week, need to login to ACCRE and update the grid certificate.
+
+

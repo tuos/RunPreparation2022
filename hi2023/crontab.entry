@@ -1,0 +1,7 @@
+# Data flow monitor for the 2023 PbPb run
+# Need to first ssh to vm-cronibus
+# Run with: "crontab crontab.entry", and write down the node ID you are running the cron jobs (gw345)
+#00 05 * * * cd /nobackup/user/tuos/run2023/monitors/CMSSW_13_2_3/src/PbPbRun2023/DATAFLOWMONITOR/AODProgress && /bin/bash progressJob.sh
+00 05 * * * cd /nobackup/user/tuos/run2023/monitors/CMSSW_13_2_3/src/PbPbRun2023/DATAFLOWMONITOR/hi2023 && /bin/bash datavolumeJob.sh
+#00 08 * * * cd /nobackup/user/tuos/run2023/monitors/CMSSW_13_2_3/src/PbPbRun2023/DATAFLOWMONITOR && cp */output*.txt /store/user/tuos/Run3MC_PbPb/monitors/
+
